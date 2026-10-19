@@ -1,5 +1,5 @@
 {
-  "CloudDefinitions": [
+  "<ADD_DYNAMODB_TABLE_NAME_HERE>": [
     {
       "PutRequest": { 
         "Item": {

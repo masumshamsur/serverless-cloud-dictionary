@@ -1,8 +1,10 @@
 import json
+import os
 import boto3
 
 dynamodb = boto3.client('dynamodb')
-table_name = 'CloudDefinitions'
+# [CHANGED] was: table_name = 'CloudDefinitions'  (now read from the Lambda environment variable TABLE_NAME)
+table_name = os.environ['TABLE_NAME']
 
 # [NEW] Shared CORS headers (was repeated inline in each return)
 HEADERS = {
